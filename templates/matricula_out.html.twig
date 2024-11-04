@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+    <title>Matrícula</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
+   
+
+    <!-- Custom styles for this template-->
+    <link href="css/estilos-propios.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    
+     <link rel="stylesheet" href="{{ asset('css/estilos-propios.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sb-admin-2.css') }}">
+
+    
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="navbar_index">
+
+
+                    <!-- Brand -->
+                    <a class="navbar-brand d-flex flex-column justify-content-center" href="index.html">
+                        <div class="navbar-brand-icon">
+                            <img src="img\LogoWeb.png" alt="Logo">
+                        </div>
+                    </a>
+
+
+                    <!-- Topbar Search -->
+
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-5 my-2 my-md-0 mw-100 navbar-search"
+                        action="#" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small"
+                                placeholder="Buscar curso..." aria-label="Search" aria-describedby="basic-addon2"
+                                name="keyword">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+
+                            <!--Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search" action="#" method="GET">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Buscar curso..." aria-label="Buscar"
+                                            aria-describedby="basic-addon2" name="keyword">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+
+
+                        <!-- Nav Item - LogIn -->
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <li class="nav-item no-arrow  d-none d-sm-flex align-items-center">
+                            <a class="collapse-item" href="login.html" id="login">
+                                <i class="fas fa-user mr-2"></i> Iniciar sesión
+                            </a>
+                        </li>
+
+                        <!-- Nav Item - LogIn (Visible Only XS) -->
+                        <div class="topbar-divider d-block d-sm-none"></div>
+                        <li class="nav-item no-arrow d-sm-none mt-4">
+                            <a class="collapse-item" href="login.html" id="loginXS">
+                                <i class="fas fa-user mr-2"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid margen-contenedor">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex d-none align-items-center justify-content-between mb-4 mt-forzado">
+                        <h1 class="h3 mb-4 text-highlight">Datos personales</h1>
+                    </div>
+
+                    <!-- Page Heading formato xs -->
+                    <div class="d-xs-flex d-sm-none align-items-center justify-content-between mb-4 mt-forzado">
+                        <h1 class="h4 mb-0 text-gray-800 text-highlight">Datos personales</h1>
+
+                    </div>
+                    <form method="POST" action="index.html" id="form_matricula">
+                        <div class="card anchoResponsive shadow rounded bg-white mb-5">
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-secondary"><strong>Nombre del curso seleccionado...
+                                    </strong>
+                                </h6>
+                            </div>
+                            <div class="card-body mb-3">
+                                <div class="px-3 pb-3 h6">
+                                    <div class="row">
+                                        <div class="col-md-6 my-3">
+                                            <div class="formLabel text-highlight mb-2">Apellidos:</div>
+                                            <input name="apellidos" type="text" id="apellidos" value=" " required />
+                                        </div>
+
+                                        <div class="col-md-6 my-3">
+                                            <div class="formLabel text-highlight mb-2">Nombre:</div>
+                                            <input name="nombre" type="text" id="nombre" value=" " required />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 my-3">
+                                            <div class="formLabel text-highlight mb-2">Dni:</div>
+                                            <input name="dni" type="text" id="dni" value=" " required />
+                                        </div>
+
+                                        <div class="col-md-6 my-3">
+                                            <div class="formLabel text-highlight mb-2">E-mail:</div>
+                                            <input name="email" type="text" id="email" value=" " required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4 mb-2">
+                                    <a href="#confirmacionMatricula" class="btn btn-primary anchoBoton mx-2 my-2"
+                                        data-toggle="modal">Aceptar</a>
+                                    <a href="#" class="btn btn-secondary anchoBoton mx-2 my-2" onclick="history.back()">Volver</a>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+                        <!-- Estructura del Modal de Confirmación -->
+                        <div class="modal fade" id="confirmacionMatricula" tabindex="-1" role="dialog"
+                            aria-labelledby="confirmacionMatriculaLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content ">
+                                    <div class="modal-header background">
+                                        <h5 class="modal-title" id="confirmacionMatriculaLabel"><strong>Confirmar
+                                                matrícula</strong></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        ¿Estás seguro de que deseas confirmar la matrícula?
+                                    </div>
+                                    <div class="modal-footer d-flex justify-content-center">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cancelar
+                                        </button>
+                                        <button type="button" class="btn background" id="confirmarAccion"
+                                            href="#matriculaConfirmada" data-dismiss="modal" data-toggle="modal"
+                                            data-target="#matriculaConfirmada">Confirmar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Estructura del Modal de Matrícula Confirmada -->
+                        <div class="modal fade" id="matriculaConfirmada" tabindex="-1" role="dialog"
+                            aria-labelledby="matriculaConfirmadaLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header background">
+                                        <h5 class="modal-title" id="matriculaConfirmadaLabel"><strong>Matrícula
+                                                confirmada</strong></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        ¡Tu matrícula ha sido confirmada con éxito!
+                                        <br>En breve recibirá un e-mail de confirmación</br>
+                                    </div>
+                                    <!-- El botón Aceptar envía el formulario y cierra el modal -->
+                                    <div class=" modal-footer d-flex justify-content-center mb-2">
+                                        <button type="submit" class="btn background anchoBoton">
+                                            Aceptar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.js"></script>
+
+    
+
+    <script>
+        document.getElementById("matriculaConfirmada").addEventListener("submit", function () {
+            $('#matriculaConfirmada').modal('hide');
+        });
+    </script>
+
+
+</body>
+
+</html>

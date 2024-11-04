@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: #333;
+}
+
+
+.navbar-toggler {
+    background-color: #fff;
+
+}
+
+.navbar-collapse {
+    background-color: #fff;
+    position: relative;
+    z-index: 1050;
+
+}
+.navbar-brand{
+    background-color: rgb(255, 255, 255);
+  }
+
+  .navbar-brand-icon img{
+    width: 160px; 
+    height: 50px;
+  }
+
+
+
+.titulo-navbar {
+    font-size: 2rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+@media (max-width: 576px) {
+    .titulo-navbar {
+        font-size: 1.1rem !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+        color: #005596; 
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: #fff;
+        max-width: 50%;
+
+    }
+
+
+}
+
+/* Asegura que el dropdown aparezca justo debajo del elemento */
+.nav-item.dropdown {
+    position: relative;
+
+}
+
+/* Asegura que el dropdown esté oculto por defecto solo en pantallas grandes */
+@media (min-width: 768px) {
+    .dropdown-menu {
+        display: none;
+    }
+
+    /* Para pantallas más grandes, activar el hover */
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Para pantallas pequeñas, permite que el menú se active con clic */
+@media (max-width: 767px) {
+    .dropdown-menu {
+        display: block;
+        /* Restauramos el comportamiento por defecto para pantallas pequeñas */
+        position: static;
+        /* Opcional: ayuda en algunos casos a mantener el dropdown en la ubicación correcta */
+
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    z-index: 1050;
+}
+
+/* Ajustar el ancho del dropdown en pantallas xs */
+@media (max-width: 576px) {
+    .dropdown-xs-width {
+        width: 80% !important;
+        /* Ajusta este porcentaje según tus necesidades */
+        max-width: 250px;
+        /* Ajusta la anchura máxima si prefieres */
+        margin: 0 auto;
+        /* Centra el menú */
+    }
+}
+
+
+.card-border {
+    border-color: #2b3a61 !important;
+}
+
+.margen-contenedor {
+    margin-left: 40px;
+    /* Ajusta este valor al margen que prefieras */
+    margin-right: 20px;
+    /* Ajusta este valor al margen que prefieras */
+}
+
+/* Limitar el ancho máximo en pantallas grandes */
+@media (min-width: 992px) {
+    .margen-contenedor {
+        max-width: calc(100% - 60px);
+
+    }
+}
+
+.mt-forzado {
+    margin-top: 4rem !important;
+    /* Ajusta el valor a lo que prefieras */
+}
+
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #53575c;
+}
+
+/* Estilo por defecto para XS */
+.anchoBoton {
+    width: 48%;
+    /* Tamaño para XS (por defecto) */
+}
+
+/* Ajustar tamaño en pantallas SM o mayores */
+@media (min-width: 576px) {
+    .anchoBoton {
+        width: 20%;
+
+        /* Tamaño pequeño para pantallas medianas y superiores */
+    }
+}
+
+.ancho-table {
+    width: 100% !important;
+}
+
+/* Ancho de 50% en pantallas grandes */
+@media (min-width: 768px) {
+    .ancho-table {
+        width: 50% !important;
+    }
+}
+
+.anchoResponsive {
+    width: 100%;
+    /* Ancho completo en XS */
+}
+
+/* En pantallas medianas o mayores (SM o superior), cambiar a 50% */
+@media (min-width: 768px) {
+    .anchoResponsive {
+        width: 50%;
+    }
+}
+
+.user-initials-custom {
+    background-color: #005596 !important;
+    color: white !important;
+    width: 35px !important;
+    height: 35px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-weight: bold !important;
+    font-size: 0.9rem !important;
+    border-radius: 50% !important; /* Para asegurarte de que sea circular */
+}
+
+/* Estilo para el enlace dentro del menú desplegable en formato pequeño */
+.logout-item-xs {
+    color: #005596 !important;
+    font-weight: bold !important;
+}
+
+.text-highlight {
+    color: #005596 !important;
+    font-weight: bold !important;
+}
+
+.text-color{
+    color: #005596 !important;
+}
+
+.text-bold{
+    font-weight: bold!important;
+}
+.background{
+    background-color: #005596!important;
+    color:white!important;
+}
+.text-tableSize{
+    font-size: 17px!important;
+}
+
+.table-display{
+    display: flex; 
+    align-items: center;
+}
+
+.select-opt{
+    min-width: 150px; 
+    white-space: nowrap;
+}
+.custom-alert {
+    border-width: 3px!important;
+   
+    border-color: rgb(255, 85, 85)!important;
+   
+    border-style: solid!important;
+ 
+    padding: 20px;
+ 
+    word-wrap: break-word;
+    
+}
+
+.width-erase{
+    min-width: 250px;
+}
+
+.back-loginData{
+    background: linear-gradient(90deg,#005596 0%, #00264d 100%) !important;
+   
+}
+
+.secondary-tittle{
+    color:rgb(117, 114, 114)!important; 
+    font-weight: bold!important;
+}
