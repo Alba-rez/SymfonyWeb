@@ -11,7 +11,7 @@
 
     
 
-    <title>Matrícula</title>
+    <title>{{titulo}}</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
@@ -39,87 +39,9 @@
             <!-- Main Content -->
             <div id="content">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="navbar_index">
-
-
-                    <!-- Brand -->
-                    <a class="navbar-brand d-flex flex-column justify-content-center" href="index.html">
-                        <div class="navbar-brand-icon">
-                            <img src="img\LogoWeb.png" alt="Logo">
-                        </div>
-                    </a>
-
-
-                    <!-- Topbar Search -->
-
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-5 my-2 my-md-0 mw-100 navbar-search"
-                        action="#" method="GET">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small"
-                                placeholder="Buscar curso..." aria-label="Search" aria-describedby="basic-addon2"
-                                name="keyword">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-
-                            <!--Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search" action="#" method="GET">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Buscar curso..." aria-label="Buscar"
-                                            aria-describedby="basic-addon2" name="keyword">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="submit">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-
-
-                        <!-- Nav Item - LogIn -->
-                        <div class="topbar-divider d-none d-sm-block"></div>
-                        <li class="nav-item no-arrow  d-none d-sm-flex align-items-center">
-                            <a class="collapse-item" href="login.html" id="login">
-                                <i class="fas fa-user mr-2"></i> Iniciar sesión
-                            </a>
-                        </li>
-
-                        <!-- Nav Item - LogIn (Visible Only XS) -->
-                        <div class="topbar-divider d-block d-sm-none"></div>
-                        <li class="nav-item no-arrow d-sm-none mt-4">
-                            <a class="collapse-item" href="login.html" id="loginXS">
-                                <i class="fas fa-user mr-2"></i>
-                            </a>
-                        </li>
-                    </ul>
-
-                </nav>
-                <!-- End of Topbar -->
+                        {% include 'navbar.html.twig' %}
+                    <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid margen-contenedor">
@@ -137,7 +59,7 @@
                     <form method="POST" action="index.html" id="form_matricula">
                         <div class="card anchoResponsive shadow rounded bg-white mb-5">
                             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-secondary"><strong>Nombre del curso seleccionado...
+                                <h6 class="m-0 font-weight-bold text-secondary"><strong>{{curso.getTitulo()}}
                                     </strong>
                                 </h6>
                             </div>

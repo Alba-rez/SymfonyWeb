@@ -19,26 +19,49 @@ class CursosController extends AbstractController
 
     public function cursosDisponibles(CursosRepository $cursosRepository): Response
     {
+        
         $cursos = $cursosRepository->findAll(); // Esto recupera todos los cursos de la base de datos
         return $this->render('home/index.html.twig', [
             'cursos' => $cursos, // Aquí pasamos la lista de cursos a la plantilla
         ]);
     }
 
-    /**
-     * @Route("/detalles", name="pagina_detalles")
+     /**
+     * @Route("/detalles/{curso_id}", name="pagina_detalles")
      */
-    public function detallesCurso(): Response
+    public function detallesCurso(int $curso_id, CursosRepository $cursosRepository): Response
     {
-        return $this->render('detalles_curso.html.twig');
+        $titulo = 'Detalles Curso';
+        $curso = $cursosRepository->find($curso_id);
+        
+
+        if (!$curso) {
+            throw $this->createNotFoundException('Curso no encontrado');
+        }
+
+        return $this->render('detalles_curso.html.twig', [
+            'curso' => $curso, // Pasamos la instancia del curso a la plantilla
+            'titulo'=>$titulo,
+        ]);
     }
 
     /**
-     * @Route("/matricula", name="pagina_matricula")
+     * @Route("/matricula/{curso_id}", name="pagina_matricula")
      */
-    public function matriculaCurso(): Response
+    public function matriculaCurso(int $curso_id, CursosRepository $cursosRepository): Response
     {
-        return $this->render('matricula_out.html.twig');
+        $titulo = 'Matrícula'; 
+        $curso = $cursosRepository->find($curso_id);
+        
+        // Verificar si el curso existe
+        if (!$curso) {
+            throw $this->createNotFoundException('Curso no encontrado');
+        }
+
+        return $this->render('matricula_out.html.twig', [
+            'curso' => $curso,
+            'titulo' => $titulo, // Pasar el título a la plantilla
+        ]);
     }
 
     /**
@@ -54,7 +77,8 @@ class CursosController extends AbstractController
 	 */
 	public function perfil(): Response
 	{
-	    return $this->render('perfil_usuario.html.twig');
+	    $titulo='Perfil Usuario';
+        return $this->render('perfil_usuario.html.twig',['titulo'=>$titulo,]);
 	}
 	
    /**
@@ -62,7 +86,8 @@ class CursosController extends AbstractController
      */
     public function areaPersonal(): Response
     {
-        return $this->render('area_personal.html.twig');
+        $titulo='Area Personal';
+        return $this->render('area_personal.html.twig',['titulo'=>$titulo,]);
     }
         
     

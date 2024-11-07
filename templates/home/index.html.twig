@@ -77,17 +77,17 @@
                                 {# Bucle para mostrar cada curso #}
                                 {% for curso in cursos %}
                                     <tr>
-                                        <td>{{ curso.titulo }}</td>
+                                        <td>{{ curso.getTitulo() }}</td>
                                         <td>
                                             <button class="btn btn-info mx-1 my-1">
                                                 {# Enlace a detalles del curso #}
-                                                <a class="text-white" href="{{ path('pagina_detalles', {'id': curso.getCursoId()}) }}">
+                                                <a class="text-white" href="{{ path('pagina_detalles', {'curso_id': curso.getCursoId()}) }}">
                                                     <i class="fas fa-info-circle"></i> Ver
                                                 </a>
                                             </button>
                                             <button class="btn btn-success mx-1 my-1">
                                                 {# Enlace para matricularse en el curso #}
-                                                <a class="text-white" href="{{ path('pagina_matricula', {'id': curso.getCursoId()}) }}">
+                                                <a class="text-white" href="{{ path('pagina_matricula', {'curso_id': curso.getCursoId()}) }}">
                                                     <i class="fas fa-check"></i> Matrícula
                                                 </a>
                                             </button>

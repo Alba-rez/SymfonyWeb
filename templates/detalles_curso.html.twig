@@ -11,7 +11,7 @@
 
     
 
-    <title>Detalles cursos</title>
+    <title>{{titulo}}</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
@@ -68,9 +68,10 @@
                     <!-- "anchoResponsive" -> ancho responsivo creado para este panel al 100% para < XS y 75% para > XS-->
 
                     <div class="card anchoResponsive shadow rounded bg-white mb-5" id="detalles_cursos">
+                 
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-secondary">
-                                <strong>Nombre del curso seleccionado...</strong>
+                                <strong>{{ curso.getTitulo() }}</strong>
                             </h6>
                         </div>
                         <div class="card-body mb-3">
@@ -78,51 +79,51 @@
                                 <div class="row">
                                     <div class="col-md-6 my-3">
                                         <div class="formLabel my-2 text-highlight">Tipo:</div>
-                                        <input name="tipo" readonly="readonly" type="text" id="tipo" value=" " />
+                                        <input name="tipo" readonly="readonly" type="text" id="tipo" value="{{curso.getTipo()}}" />
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 my-3">
                                         <div class="formLabel my-2 text-highlight">Número de horas:</div>
-                                        <input name="horas" readonly="readonly" type="text" id="horas" value=" " />
+                                        <input name="horas" readonly="readonly" type="text" id="horas" value="{{curso.getHoras()}} " />
                                     </div>
 
                                     <div class="col-md-6 my-3">
                                         <div class="formLabel my-2 text-highlight">Días semana:</div>
                                         <input name="dias_semana" readonly="readonly" type="text" id="dias_semana"
-                                            value=" " />
+                                            value="{{curso.getDiasSemana()}}" />
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 my-3">
                                         <div class="formLabel my-2 text-highlight">Organiza:</div>
                                         <input name="organiza" readonly="readonly" type="text" id="organiza"
-                                            value=" " />
+                                            value="{{curso.getOrganiza()}}" />
                                     </div>
 
                                     <div class="col-md-6 my-3">
                                         <div class="formLabel my-2 text-highlight">Lugar:</div>
-                                        <input name="lugar" readonly="readonly" type="text" id="lugar" value=" " />
+                                        <input name="lugar" readonly="readonly" type="text" id="lugar" value="{{curso.getLugar()}}" />
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 my-3">
                                         <div class="formLabel my-2 text-highlight">Fecha Inicio:</div>
                                         <input name="fecha_inicio" readonly="readonly" type="text" id="fecha_inicio"
-                                            value=" " />
+                                            value="{{curso.getFechaInicio().format('d-m-Y')}}" />
                                     </div>
 
                                     <div class="col-md-6 my-3">
                                         <div class="formLabel my-2 text-highlight">Fecha Fin:</div>
                                         <input name="fecha_fin" readonly="readonly" type="text" id="fecha_fin"
-                                            value=" " />
+                                            value="{{curso.getFechaFin().format('d-m-Y')}}" />
                                     </div>
                                 </div>
 
                                 <div class="card my-4">
                                     <div class="card-body">
                                         <h5 class="card-title text-highlight">Descripción del Curso:</h5>
-                                        <p class="card-text">Aquí va la descripción detallada del curso...</p>
+                                        <p class="card-text">{{curso.getDescripcion()}}</p>
                                     </div>
                                 </div>
                             </div>
