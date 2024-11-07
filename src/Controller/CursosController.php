@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\CursosRepository; 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,9 +12,17 @@ class CursosController extends AbstractController
     /**
      * @Route("/", name="index")
      */
-    public function inicio(): Response
+    /*public function inicio(): Response
     {
         return $this->render('home/index.html.twig');
+    }*/
+
+    public function cursosDisponibles(CursosRepository $cursosRepository): Response
+    {
+        $cursos = $cursosRepository->findAll(); // Esto recupera todos los cursos de la base de datos
+        return $this->render('home/index.html.twig', [
+            'cursos' => $cursos, // Aquí pasamos la lista de cursos a la plantilla
+        ]);
     }
 
     /**
@@ -39,7 +48,28 @@ class CursosController extends AbstractController
     {
         return $this->render('login.html.twig');
     }
+    
+	/**
+	 * @Route("/area_personal/perfil_usuario", name="pagina_perfil")
+	 */
+	public function perfil(): Response
+	{
+	    return $this->render('perfil_usuario.html.twig');
+	}
+	
+   /**
+     * @Route("/login/area_personal", name="pagina_area")
+     */
+    public function areaPersonal(): Response
+    {
+        return $this->render('area_personal.html.twig');
+    }
+        
+    
+	
 
-    // Agrega más rutas según las opciones que tengas en tu HTML
+    
 }
+
+
 

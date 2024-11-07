@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+    <title>Perfil usuario</title>
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.css') }}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{ asset('css/estilos-propios.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sb-admin-2.css') }}">
+    
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="navbar_personal">
+
+                    <!-- Brand -->
+                    <a class="navbar-brand d-flex flex-column justify-content-center" href="{{ path('index') }}">
+                        <div class="navbar-brand-icon">
+                            <img src="img\LogoWeb.png" alt="Logo">
+                        </div>
+                    </a>
+
+                    <!-- Topbar Navbar -->
+
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <h2 class="nav-link d-flex align-items-center titulo-navbar text-highlight" >
+                               Perfil Usuario
+                            </h2>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline small text-highlight">Douglas McGee</span>
+
+                                <div class="img-profile rounded-circle user-initials user-initials-custom">
+                                    DM
+                                </div>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <!-- "dropdown-xs-width" es una clase creada para controlar el tamaño del dropdown en pantallas pequeñas -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in dropdown-xs-width"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item text-highlight" href="{{path('pagina_area')}}">
+                                    <i class="fas fa-home fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Area Personal
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-highlight" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cerrar sesión
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid margen-contenedor">
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex d-none align-items-center justify-content-between mb-4 mx-1 mt-forzado">
+                        <h1 class="h3 mb-0 text-highlight">Ficha empleado</h1>
+                        <!-- Botón visible solo en SM y más grande -->
+                        <a class="btn btn-sm btn-primary shadow-sm d-none d-sm-inline-block" href="#"
+                            onclick="window.print()">
+                            <i class="fas fa-print fa-sm text-white"></i> Imprimir ficha
+                        </a>
+                    </div>
+
+                    <!-- Page Heading formato xs -->
+                    <div class="d-xs-flex d-sm-none align-items-center justify-content-between mb-4 mt-forzado">
+                        <h1 class="h4 mb-0 text-highlight" >Ficha empleado
+
+                            <!-- Ícono visible impresora solo en XS -->
+                            <a href="#" onclick="window.print()">
+                                <i class="fas fa-print fa-sm d-inline d-sm-none ml-2"></i>
+                            </a>
+                        </h1>
+
+                    </div>
+
+                    <!-- Collapsable Card Example Datos empresa -->
+                    <div class="card anchoResponsive shadow rounded bg-white mb-5 ancho-table" id="datos_empresa">
+                        <!-- Card Header - Accordion -->
+                        <a href="#collapseCardEmpresa" class="d-block card-header py-3" data-toggle="collapse"
+                            role="button" aria-expanded="true" aria-controls="collapseCardEmpresa">
+                            <h6 class="m-0 font-weight-bold text-gray-800">Datos empresa</h6>
+                        </a>
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse show" id="collapseCardEmpresa">
+                            <div class="card-body">
+                                <div class="px-3 pb-3 h6">
+                                    <div class="row">
+                                        <div class="col-md-6 my-3">
+                                            <div class="formLabel text-highlight">Código empleado:</div>
+                                            <input name="cod_empleado" readonly="readonly" type="text" id="cod_empleado"
+                                                value=" " />
+                                        </div>
+
+                                        <div class="col-md-6 my-3">
+                                            <div class="formLabel text-highlight">Entidad:</div>
+                                            <input name="entidad" readonly="readonly" type="text" id="entidad"
+                                                value=" " />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 my-3">
+                                            <div class="formLabel text-highlight">Estado: </div>
+                                            <input name="estado" readonly="readonly" type="text" id="estado"
+                                                value=" " />
+                                        </div>
+
+                                        <div class="col-md-6 my-3">
+                                            <div class="formLabel text-highlight">Tipo usuario</div>
+                                            <input name="tipo_usu" readonly="readonly" type="text" id="tipo_usu"
+                                                value=" " />
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsable Card Example Datos personales -->
+                    <div class="card anchoResponsive shadow rounded bg-white mb-5 ancho-table" id="datos_personales">
+                        <!-- Card Header - Accordion -->
+                        <a href="#collapseCardPersonal" class="d-block card-header py-3" data-toggle="collapse"
+                            role="button" aria-expanded="true" aria-controls="collapseCardPersonal">
+                            <h6 class="m-0 font-weight-bold text-gray-800">Datos personales</h6>
+                        </a>
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse show" id="collapseCardPersonal">
+                            <div class="card-body">
+                                <div class="px-3 pb-3 h6">
+                                    <div class="row">
+                                        <div class="col-md-6 my-3">
+                                            <div class="formLabel text-highlight">Nombre:</div>
+                                            <input name="nombres" readonly="readonly" type="text" id="nombre"
+                                                value=" " />
+                                        </div>
+
+                                        <div class="col-md-6 my-3">
+                                            <div class="formLabel text-highlight">Apellidos:</div>
+                                            <input name="apellidos" readonly="readonly" type="text" id="apellidos"
+                                                value=" " />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 my-3">
+                                            <div class="formLabel text-highlight">Dni: </div>
+                                            <input name="dni" readonly="readonly" type="text" id="dni" value=" " />
+                                        </div>
+
+                                        <div class="col-md-6 my-3">
+                                            <div class="formLabel text-highlight">E-mail</div>
+                                            <input name="email" readonly="readonly" type="text" id="email" value=" " />
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tabla cursos -->
+                    <div class="ancho-table mb-5">
+                        <div class="d-sm-flex d-none align-items-center justify-content-between mb-4 mx-1 mt-forzado">
+                            <h1 class="h3 mb-0 text-highlight" >Cursos realizados</h1>
+
+                        </div>
+
+                        <div class="d-xs-flex d-sm-none align-items-center justify-content-between mb-4 mt-forzado">
+                            <h1 class="h4 mb-0 text-highlight" >Cursos realizados
+                            </h1>
+
+                        </div>
+
+                        <table id="tabla_cursos_in " class="table table-striped mt-4 shadow rounded bg-white">
+                            <thead class="background">
+                                <tr>
+                                    <th>Nombre curso</th>
+                                    <th>Acciones</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Machine learning aplicado usando python ()</td>
+                                    <td>
+
+                                        <button type="button" class="btn btn-info  mx-1 my-1 ">
+                                            <a class="text-white" href="{{path('pagina_detalles')}}">
+                                                <i class="fas fa-info-circle"></i>
+                                                Ver
+                                            </a>
+                                        </button>
+
+                                        
+                                        <button type="button" class="btn btn-warning mx-1 my-1">
+                                            <a  class="text-white" href="#" >
+                                                <i class="fas fa-clipboard-check"></i>
+                                                
+                                                Certificado
+                                            </a>    
+                                        </button>                           
+                                        
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>High Performance Computing and Quantum Computing 5th ed ()</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info  mx-1 my-1 ">
+                                            <a class="text-white" href="{{path('pagina_detalles')}}">
+                                                <i class="fas fa-info-circle"></i>
+                                                Ver
+                                            </a>
+                                        </button>
+
+                                        
+                                        <button type="button" class="btn btn-warning mx-1 my-1" >
+                                            <a class="text-white" href="#">
+                                                <i class="fas fa-clipboard-check"></i>
+                                                
+                                                Certificado
+                                            </a>    
+                                        </button>           
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="col-md-6">
+                        <a href="{{path('pagina_area')}}" class="btn btn-secondary anchoBoton mb-5" >Volver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header background" >
+                    <h5 class="modal-title" id="exampleModalLabel">¿Estás seguro de querer cerrar sesión?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Selecciona "Cerrar sesión" si quieres finalizar la sesión actual.</div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn background" href="{{path('pagina_login')}}">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.js"></script>
+
+    
+</body>
+
+</html>

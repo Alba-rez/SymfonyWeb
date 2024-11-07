@@ -39,44 +39,7 @@
             <!-- Main Content -->
             <div id="content">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Brand -->
-                    <a class="navbar-brand d-flex flex-column justify-content-center" href="index.html">
-                        <div class="navbar-brand-icon">
-                            <img src="img\LogoWeb.png" alt="Logo">
-                        </div>
-                    </a>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <h2 class="nav-link d-flex align-items-center titulo-navbar text-highlight">
-                                Detalles curso
-                            </h2>
-                        </li>
-
-                        <div class="topbar-divider"></div>
-
-                        <!-- Nav Item - LogIn (Visible Only XS) -->
-
-                        <li class="nav-item no-arrow d-sm-none mt-4">
-                            <a class="collapse-item" href="login.html" id="loginXS">
-                                <i class="fas fa-user mr-2 mt-2"></i>
-                            </a>
-
-                            <!-- Nav Item - LogIn -->
-                            <div class="topbar-divider d-none d-sm-block"></div>
-                        <li class="nav-item no-arrow  d-none d-sm-flex align-items-center">
-                            <a class="collapse-item" href="login.html" id="login">
-                                <i class="fas fa-user mr-2"></i> Iniciar sesión
-                            </a>
-                        </li>
-                    </ul>
-
-                </nav>
-                <!-- End of Topbar -->
+                {% include 'navbar.html.twig' %}
                 <!-- Begin Page Content -->
                 <div class="container-fluid margen-contenedor">
 

@@ -28,205 +28,94 @@
 
 <body id="page-top">
 
-    <!-- Page Wrapper -->
+    {# Contenedor principal de la página #}
     <div id="wrapper">
 
-
-
-
-        <!-- Content Wrapper -->
+        {# Contenedor para el contenido principal #}
         <div id="content-wrapper" class="d-flex flex-column">
 
-            <!-- Main Content -->
             <div id="content">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="navbar_index">
+                {# Incluye la barra de navegación #}
+                {% include 'navbarIndex.html.twig' %}
 
-
-                    <!-- Brand -->
-                    <a class="navbar-brand d-flex flex-column justify-content-center" href="index.html">
-                        <div class="navbar-brand-icon">
-                            <img src="img\LogoWeb.png" alt="Logo">
-                        </div>
-                    </a>
-
-
-                    <!-- Topbar Search -->
-
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-5 my-2 my-md-0 mw-100 navbar-search"
-                        action="#" method="GET">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small"
-                                placeholder="Buscar curso..." aria-label="Search" aria-describedby="basic-addon2"
-                                name="keyword">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-
-                            <!--Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search" action="#" method="GET">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Buscar curso..." aria-label="Buscar"
-                                            aria-describedby="basic-addon2" name="keyword">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="submit">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-
-
-                        <!-- Nav Item - LogIn -->
-                        <div class="topbar-divider d-none d-sm-block"></div>
-                        <li class="nav-item no-arrow  d-none d-sm-flex align-items-center">
-                            <a class="collapse-item" href="{{ path('pagina_login') }}" id="login">
-                                <i class="fas fa-user mr-2"></i> Iniciar sesión
-                            </a>
-                        </li>
-
-                        <!-- Nav Item - LogIn (Visible Only XS) -->
-                        <div class="topbar-divider d-block d-sm-none"></div>
-                        <li class="nav-item no-arrow d-sm-none mt-4">
-                            <a class="collapse-item" href="{{ path('pagina_login') }}" id="loginXS">
-                                <i class="fas fa-user mr-2"></i>
-                            </a>
-                        </li>
-                    </ul>
-
-                </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
                 <div class="container-fluid margen-contenedor mb-5">
 
-
-
-                    <!-- Page Heading -->
+                    {# Encabezado de la página para pantallas grandes #}
                     <div class="d-sm-flex d-none align-items-center justify-content-between mb-4 mx-1 mt-forzado">
                         <h1 class="h3 mb-0 text-highlight">Cursos Disponibles</h1>
 
-                        <!-- Botón visible solo en SM y más grande -->
+                        {# Botón de imprimir visible solo en SM o pantallas más grandes #}
                         <a class="btn btn-sm btn-primary shadow-sm d-none d-sm-inline-block" href="#"
                             onclick="window.print();">
                             <i class="fas fa-print fa-sm text-white"></i> Imprimir cursos
                         </a>
                     </div>
 
-                    <!-- Page Heading formato xs -->
+                    {# Encabezado de la página para pantallas XS #}
                     <div class="d-xs-flex d-sm-none align-items-center justify-content-between mb-4 mt-forzado">
                         <h1 class="h4 mb-0 text-highlight">Cursos Disponibles
 
-                            <!-- Ícono visible impresora solo en XS -->
+                            {# Ícono de impresora visible solo en XS #}
                             <a class="d-inline d-sm-none ml-2" href="#" onclick="window.print();">
                                 <i class="fas fa-print fa-sm "></i>
                             </a>
                         </h1>
-
                     </div>
 
-
-
-                    <!-- Content Row -->
-                    <div class="ancho-table mx-1 my-5 shadow rounded bg-white ">
+                    {# Tabla de cursos disponibles #}
+                    <div class="ancho-table mx-1 my-5 shadow rounded bg-white">
 
                         <table class="table table-striped mt-4" id="tabla_cursos">
                             <thead class="background">
                                 <tr>
-                                    <th>Nombre curso</th>
+                                    <th>Título del Curso</th>
                                     <th>Opciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Machine learning aplicado usando python ()</td>
-                                    <td>
-                                        <button class="btn btn-info mx-1 my-1">
-                                            <a class="text-white" href="{{ path('pagina_detalles') }}" >
-                                                <i class="fas fa-info-circle"></i>
-                                                Ver
-                                            </a>
-                                        </button>
-                                        <button class="btn btn-success mx-1 my-1">
-                                            <a class="text-white" href="{{ path('pagina_matricula') }}">
-                                                <i class="fas fa-check"></i>
-                                                Matrícula
-                                            </a>
-                                        </button>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>High Performance Computing and Quantum Computing 5th ed ()</td>
-                                    <td>
-                                        <button class="btn btn-info mx-1 my-1">
-                                            <a class="text-white" href="{{ path('pagina_detalles') }}" >
-                                                <i class="fas fa-info-circle"></i>
-                                                Ver
-                                            </a>
-                                        </button>
-                                        <button class="btn btn-success mx-1 my-1">
-                                            <a class="text-white" href="{{ path('pagina_matricula') }}">
-                                                <i class="fas fa-check"></i>
-                                                Matrícula
-                                            </a>
-                                        </button>
-                                    </td>
-
-                                </tr>
-
+                                {# Bucle para mostrar cada curso #}
+                                {% for curso in cursos %}
+                                    <tr>
+                                        <td>{{ curso.titulo }}</td>
+                                        <td>
+                                            <button class="btn btn-info mx-1 my-1">
+                                                {# Enlace a detalles del curso #}
+                                                <a class="text-white" href="{{ path('pagina_detalles', {'id': curso.getCursoId()}) }}">
+                                                    <i class="fas fa-info-circle"></i> Ver
+                                                </a>
+                                            </button>
+                                            <button class="btn btn-success mx-1 my-1">
+                                                {# Enlace para matricularse en el curso #}
+                                                <a class="text-white" href="{{ path('pagina_matricula', {'id': curso.getCursoId()}) }}">
+                                                    <i class="fas fa-check"></i> Matrícula
+                                                </a>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                {% else %}
+                                    {# Mensaje si no hay cursos disponibles #}
+                                    <tr>
+                                        <td colspan="2">No hay cursos disponibles</td>
+                                    </tr>
+                                {% endfor %}
                             </tbody>
                         </table>
 
                     </div>
                 </div>
                 <!-- /.container-fluid -->
-
             </div>
-            <!-- End of Main Content -->
+            <!-- Fin del contenido principal -->
         </div>
-        <!-- End of Content Wrapper -->
-
+        <!-- Fin del contenedor del contenido -->
     </div>
-    <!-- End of Page Wrapper -->
+    <!-- Fin del contenedor principal -->
 
-    <!-- Scroll to Top Button-->
+    <!-- Botón de scroll hacia arriba -->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
-
-
-	
- 
-
-
-
 </body>
 
 </html>

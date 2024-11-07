@@ -1,0 +1,54 @@
+
+ <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="navbar_personal">
+
+                    <!-- Brand -->
+                    <a class="navbar-brand d-flex flex-column justify-content-center" href="{{ path('index') }}">
+                        <div class="navbar-brand-icon">
+                            <img src="img\LogoWeb.png" alt="Logo">
+                        </div>
+                    </a>
+
+                    <!-- Topbar Navbar -->
+
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <h2 class="nav-link d-flex align-items-center titulo-navbar text-highlight" >
+                                Área Personal
+                            </h2>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline small text-highlight">Douglas McGee</span>
+
+                                <div class="img-profile rounded-circle user-initials user-initials-custom">
+                                    DM
+                                </div>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <!-- "dropdown-xs-width" es una clase creada para controlar el tamaño del dropdown en pantallas pequeñas -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in dropdown-xs-width"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item text-highlight" href="{{ path('pagina_perfil') }}">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Perfil
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-highlight" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cerrar sesión
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
