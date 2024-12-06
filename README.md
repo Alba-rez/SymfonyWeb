@@ -1,2 +1,2 @@
 # SymfonyWeb
-Creación del frontend de una web a través de Symfony
+Creación del frontend y backend de una web a través de Symfony
